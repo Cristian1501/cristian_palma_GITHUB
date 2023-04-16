@@ -1,0 +1,322 @@
+*{                   /*ajustando margen y padding de toda la página*/
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header{/*editando encabezado*/
+    background-color: white; /*aplicando color de fondo*/
+    width: 100%;/*editando ancho*/
+    height: 60px;/*editando altura*/
+    font-family: Arial, Helvetica, sans-serif;/*seleccionando tipo de letra*/
+    position:fixed;/*seleccionando posicion fija para el header*/
+    top:0;/*posicion del encabezado en la parte de arriba*/
+    right:0;/*posicion del encabezado en la parte derecha*/
+}
+
+.container_header{
+    display: flex;/*ajustando contenido del header de forma horizontal*/
+    padding:0px 30px;/*ajustando el padding o relleno del contenido*/
+}
+
+header .logo{
+    width:40px;/*ajustando el ancho del contenedor*/
+    margin:0px 80px;/*ajustando el margen donde va ubicado el logo*/
+    display:flex;/*ajustando el contenido*/
+}
+
+header .logo img{
+    height: 60px;/*ajustando altura de logo*/
+    width:70px;/*ajustando ancho de logo*/
+    padding: 5px;/*ajustando el padding del logo*/
+    align-items: center;/*centrando */
+}
+
+.container_nav{/*modificando el contenedor de la barra de navegación*/
+    position:relative;
+    height: 100%;/*Definiendo la altura del contenedor*/
+}
+
+.container_nav nav ul{/*modificando la lista de la barra de navegación*/
+    display:flex;/*Ajustando los elementos de forma horizontal*/
+    list-style: none;/*quitando los puntos por defecto de la lista*/
+    padding:15px/*Ajustando el padding de la lista*/
+}
+
+.container_nav nav ul li img{
+    margin: 0px 50px 0px 120px;/*definiendo el margen de los iconos junto a los titulos*/
+}
+
+.container_nav nav ul li a{
+   
+    font-size: 20px;/*Definiendo el tamaño de los titulos y enlaces*/
+    text-decoration: none;/*Quitando el subrayado del titulo*/
+    color:black;/*definiendo el color del texto*/
+    font-weight:bolder;/*aplicando negrita*/
+    display: inline-block;/*elementos en linea*/
+}
+
+#principal{/*modificando el contenedor de la imagen principal*/
+    padding: 50;/*definiendo el padding*/
+    margin:0;/*definiendo el margen*/
+    width: 100%;/*modificando el ancho*/
+    right:0;/*definiendo el margen derecho*/
+    top:8%;/*definiendo la posicion del documento con respecto a la parte superior*/
+}
+
+#principal img{
+    width:100%/*definiendo el ancho de la imagen*/
+}
+
+.galeria{/*modificando el contenedor*/
+    width:100%;/*modificando el ancho*/
+    height:100%;/*modificando la altura*/
+    background-color:rgb(248, 227, 247);/*definiendo el color de fondo*/
+    margin:0px 0px;/*definiendo el margen*/
+    top:30px;/*definiendo la posicion del documento con respecto a la parte superior*/
+    padding: 0px 0px 20px 0px;/*definiendo el padding*/
+}
+
+.galeria h2{/*modificando el titulo*/
+    text-align: left;/*alineando hacia la izquierda*/
+    margin:20px 0px 20px 20px;/*modificando el margen del titulo*/
+    padding:30px 20px 20px 20px;/*modificando el padding del titulo*/
+    font-family: Arial, Helvetica, sans-serif;/*definiendo el formato de letra*/
+    font-size: 20px;/*definiendo el tamaño de la letra*/
+}
+
+.contenedorimg {
+    display: flex;/*Ajustando los elementos de forma horizontal*/
+    width:100%;/*definiendo el ancho del contenedor*/
+    justify-content:center;/*justificando las imagenes al centro*/
+    flex-wrap: wrap;/*conserva las propiedades y ajusta los elementos */
+    border-radius: 3px;/*redondea los bordes*/
+}
+
+.contenedorimg .imagen{
+    width:340px;/*definiendo el ancho de los elementos dentro del contenedor imagen*/
+    position:relative;
+    height: 340px;/*definiendo la altura de los elementos dentro del contenedor imagen*/
+    margin:0px 20px 20px 10px;/*definiendo el margen de los elementos dentro del contenedor imagen*/
+}
+
+.imagen img{
+    width:100%;/*definiendo el ancho de la imagen*/
+    height:100%;/*definiendo la altura de la imagen*/
+    object-fit: cover;/*define como se debe redimensionar la imagen dentro del contenedor*/
+}
+
+.overlay {/*Creación de efecto azul al pasar por la imagen*/
+    position: absolute;
+    bottom:0;/*definiendo el margen de abajo*/
+    left:0;/*definiendo el margen izquierdo*/
+    background:rgba(65, 172, 199, 0.781);/*definiendo el color del efecto*/
+    width:100%;/*definiendo el ancho*/
+    height:0%;/*definiendo la altura*/
+    transition: 0.5s;/*definiendo el tiempo de respuesta del efecto*/
+    overflow: hidden;
+}
+
+.overlay h2{/*texto del efecto*/
+    color:#fff;/*definiendo el color del texto*/
+    font-weight: 300px;/*definiendo el grosor del texto*/
+    font-size:30px;/*definiendo el tamaño del texto*/
+    position: absolute;
+    top:40%;/*definiendo el margen de arriba del texto*/
+    left:40%;/*definiendo el margen izquierdo del texto*/
+    text-align: center;/*centrando el texto*/
+    transform:translate(-50%,-50%)/*transformación*/
+
+}
+
+.imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;/*cambiando el puntero al pasar el mouse por la imagen*/
+}
+
+.panoramas{/*modificando contenedor*/
+    width:100%;/*modificando el ancho*/
+    height:100%;/*modificando la altura*/
+    background-color:rgb(248, 227, 247);/*definiendo el color del fondo*/
+    margin:auto;/*definiendo el margen automatico*/
+    top:0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.panoramas h2{/*modificando el texto*/
+    text-align: left;/*alineando el texto a la izquierda*/
+    margin:0px 0px 20px 20px;/*modificando el margen*/
+    padding:30px 20px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;/*definiendo el formato */
+    font-size: 20px;/*definiendo el tamaño de letra*/
+}
+
+.contenedorimg2 {
+    display: flex;
+    width:100%;/*definiendo el ancho del contenedor*/
+    justify-content:left;/*justificando el contenedor hacia la izquierda*/
+    flex-wrap: wrap;/*conserva las propiedades y ajusta los elementos */
+    border-radius: 3px;/*definiendo margen redondeado*/
+}
+
+.contenedorimg2 .imagen2{
+    width:340px;/*definiendo el ancho del contenedor imagen*/
+    position:relative;
+    height: 340px;/*definiendo el tamaño del contenedor de la imagen*/
+    margin:10px 0px 30px 30px;/*definiendo el margen del contenedor imagen*/
+}
+
+.imagen2 img{
+    width:100%;/*definiendo el ancho de la imagen*/
+    height:100%;/*definiendo la altura de la imagen*/
+    object-fit: cover;/*define como se debe redimensionar la imagen dentro del contenedor*/
+}
+.imagen2:hover{/*aplicando efecto al pasar el mouse por la imagen2*/
+    transform: rotate(-3deg);/*rotacion de la imagen al pasar el mouse*/
+    cursor:pointer/*cambiando el cursor al pasar el mouse*/
+}
+
+.ubicacion_tiendas{/*modificando contenedor de la imagen*/
+    width:100%;/*definiendo el ancho*/
+    height:100%;/*definiendo la altura*/
+    background-color:rgb(248, 227, 247);/*definiendo el color de fondo*/
+    margin:auto;/*definiendo el margen*/
+    top:0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.ubicacion_tiendas h2{
+    text-align: left;/*alineando el texto a la izquierda*/
+    margin:0px 0px 20px 20px;/*modificando el margen*/
+    padding:30px 20px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;/*definiendo el formato del texto*/
+    font-size: 20px;/*definiendo el tamaño del texto*/
+}
+
+.contenedorimg3 {
+    display: flex;
+    width:100%;/*definiendo el ancho del contenedor imagen3*/
+    justify-content:left;/*justificando hacia la izquierda*/
+    flex-wrap: wrap;/*conserva las propiedades y ajusta los elementos */
+    border-radius: 3px;/*aplicando un margen redondeado a la imagen*/
+}
+
+.imagen3:hover{
+    cursor: pointer;/*cambiando cursor al pasar el mouse por la imagen */
+}
+
+.contenedorimg3 .imagen3{
+    width:80%;/*modificando el ancho de la imagen 3*/
+    position:relative;
+    margin:0px 0px 0px 0px;
+}
+
+.imagen3 img{
+    width:100%;/*modificando ancho de la imagen*/
+    height:100%;/*modificando altura*/
+    object-fit: cover;/*define como se debe redimensionar la imagen dentro del contenedor*/
+}
+
+.footer{
+    background-color:rgb(52, 3, 111);/*aplicando color de fondo al footer*/
+    height:100%;/*definiendo la altura*/
+    width:100%/*definiendo el ancho*/
+}
+
+.footer h2{
+    color:#fff;/*definiendo el color de letra*/
+    text-align: center;/*centrando el texto*/
+    font-family: Arial, Helvetica, sans-serif;/*definiendo el tipo de letra*/
+    font-size: bold;/*poniendo en negrita*/
+    padding:20px/*ajustando el padding del texto*/
+}
+
+.footerlist ul li{/*modificando elementos de lista desordenada*/
+    margin:10px 0px 0px 30px;/*modificando margen*/
+    padding:0px 0px 0px 10px;/*modificando el padding*/
+    align-items: center;/*alineando elementos al centro*/
+    display:inline-block;/*poniendo elementos en linea*/
+    text-align: center;/*centrando texto*/
+}
+
+.footerlist ul h3{
+    color:#fff;/*definiendo color de texto*/
+    font-family: Arial, Helvetica, sans-serif;/*definiendo formato de texto*/
+    
+}
+
+.footerlist ul img{
+    width:330px;/*modificando el ancho*/
+    border-radius: 10px;/*redondeando bordes de imagen*/
+}
+
+.footer .ubicacion{
+    margin:0px 0px 100px 40px;/*definiendo el margen*/
+}
+
+.footer .ubicacion h2{
+    color:#fff;/*definiendo el color de texto*/
+    text-align: left;/*alineando texto a la izquierda*/
+    margin:10% 0% 0% 10%;/*definiendo el margen*/
+}
+
+.footer h4{
+    color:#fff;/*definiendo el color del texto*/
+    font-weight:normal;/*definiendo el grosor del texto*/
+    
+}
+
+.footer .horario{
+    text-align: center;/*alineando texto al centro*/
+    margin-top: -22%;/*modificando margen superior*/
+}
+
+.footer .horario ul li{
+    color:#fff;/*definiendo color de texto*/
+   
+}
+
+.footer .contacto{
+    text-align: right;/*alineando texto a la derecha*/
+}
+
+.footer .contacto h2{
+    text-align: right;/*alineando texto a la derecha*/
+    margin-top: -13%;/*modificando el margen superior*/
+    margin-right: 150px;/*modificando el margen derecho*/
+}
+
+.footer .contacto .cont{
+    margin-right: 150px;/*modificando margen derecho*/
+}
+.footer .contacto .cont a{
+    color:#fff;/*modificando color del texto*/
+    text-decoration: none;/*Quitando el subrayado del texto*/
+}
+.footer .contacto .lofono a{
+    color:#fff;/*definiendo el color del texto*/
+    text-decoration: none;/*Quitando el subrayado del texto*/
+    margin-right: 232px;/*modificando el margen derecho*/
+}
+.footer .contacto .loenviar a{
+    color:#fff;/*definiendo el color del texto*/
+    text-decoration: none;/*Quitando el subrayado del texto*/
+    margin-right: 215px;/*modificando el margen derecho*/
+}
+
+.footer .redessociales{
+    text-align: right;/*alineando a la derecha*/
+    margin-top: 45px;/*modificando margen superior*/
+    margin-right:16%/*modificando margen derecho*/
+}
+
+.footer .redessociales img{
+    border-radius: 6px;/*redondeando bordes*/
+}
+
+.dereservado{
+    color:#fff;/*definiendo color del texto*/
+    text-align: center;/*alineando texto al centro*/
+    padding:10px/*modificando el padding del texto*/
+}
